@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PMI Eduverse - Your gateway to expert-led video lectures and resources for competitive exam preparation, including RPSC, NEET, and GATE. Start learning today!">
+    <meta name="keywords" content="PMI Eduverse, online education, video lectures, competitive exams, RPSC, NEET, GATE, study resources, career guidance, Pankaj">
+    <meta name="author" content="PMI Eduverse Team">
+    <meta property="og:title" content="PMI Eduverse - Your Gateway to Knowledge">
+    <meta property="og:description" content="Access expertly crafted video lectures and resources at PMI Eduverse to excel in competitive exams like RPSC, NEET, and GATE. Join our learning community now!">
+    <meta property="og:image" content="https://i.ibb.co/PzmBMLmY/SJHY6436.png"> <!-- Logo as OG image; replace if needed -->
+    <meta property="og:url" content="https://www.pmieduverse.com">
+    <meta property="og:type" content="website">
+    <title>PMI Eduverse - Your Gateway to Knowledge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        :root {
+            --primary-color: #ff3366;
+            --secondary-color: #4ecdc4;
+            --dark-bg: #0f172a;
+            --light-bg: rgba(255, 255, 255, 0.05);
+            --gradient: linear-gradient(135deg, #0f172a, #1e293b, #ff3366);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* Navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--light-bg);
+            backdrop-filter: blur(15px);
+            padding: 15px 30px;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.6);
+        }
+
+        .nav-logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 51, 102, 0.2), transparent);
+            animation: pulse 10s infinite;
+            z-index: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+
+        .welcome-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+        }
+
+        .welcome-section h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-color), #ff6b6b);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, var(--secondary-color), #45b7d1);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            background: var(--light-bg);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            box-shadow: 0 0 5px var(--secondary-color);
+        }
+
+        .search-bar button {
+            padding: 12px 25px;
+            background: var(--secondary-color);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background: #45b7d1;
+            transform: scale(1.05);
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 10px 25px;
+            background: var(--light-bg);
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary-color);
+        }
+
+        .video-row {
+            margin-bottom: 60px;
+        }
+
+        .video-row h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .video-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--light-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .thumbnail {
+            position: relative;
+            aspect-ratio: 16/9;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .video-card:hover .thumbnail img {
+            transform: scale(1.1);
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .video-info a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: var(--secondary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .video-info a:hover {
+            background: #45b7d1;
+            transform: translateX(5px);
+        }
+
+        /* Featured Video */
+        .featured-video {
+            background: var(--light-bg);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            gap: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-wrapper {
+            flex: 2;
+            position: relative;
+            padding-bottom: 56.25%;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-description {
+            flex: 1;
+        }
+
+        .video-description h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .video-description p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        /* Back to Top */
+        .floating-action-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .floating-action-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .featured-video {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .video-slider {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+
+            .welcome-section p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav data-aos="fade-down">
+        <div class="nav-logo">
+            <img src="https://i.ibb.co/PzmBMLmY/SJHY6436.png" alt="PMI Eduverse Logo">
+            <h1>PMI Eduverse</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#latest">Latest Videos</a>
+            <a href="#popular">Popular Videos</a>
+            <a href="https://www.pmieduverse.com/about">About Us</a>
+            <a href="https://www.pmieduverse.com/contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="welcome-section" data-aos="fade-up">
+        <div class="welcome-content">
+            <h1>Welcome to PMI Eduverse</h1>
+            <p>Embark on a journey of knowledge and excellence. Join our community of learners and unlock your full potential with expert-led video lectures and comprehensive resources.</p>
+            <div class="cta-buttons">
+                <a href="https://www.youtube.com/@PMIeduverse" class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i> Start Learning
+                </a>
+                <a href="https://www.pmieduverse.com/comingsoon" class="btn btn-secondary">
+                    <i class="fas fa-book-open"></i> Explore Courses
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="search-bar" data-aos="fade-up">
+            <form action="https://www.youtube.com/results" method="get" target="_blank">
+                <input type="text" name="search_query" placeholder="Search for videos..." required>
+                <input type="hidden" name="sp" value="EgIQAQ%253D%253D">
+                <button type="submit" title="Search"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="category-filter" data-aos="fade-up" data-aos-delay="200">
+            <button class="category-btn active" onclick="window.open('https://www.youtube.com/@PMIeduverse/videos', '_blank')">All</button>
+            <button class="category-btn" onclick="window.open('https://www.youtube.com/@PMIeduverse/search?query=competitive%20exams', '_blank')">Competitive Exams</button>
+            <button class="category-btn" onclick="window.open('https://www.youtube.com/@PMIeduverse/search?query=career%20guidance', '_blank')">Career Guidance</button>
+            <button class="category-btn" onclick="window.open('https://www.youtube.com/@PMIeduverse/search?query=study%20tips', '_blank')">Study Tips</button>
+            <button class="category-btn" onclick="window.open('https://www.youtube.com/@PMIeduverse/search?query=current%20affairs', '_blank')">Current Affairs</button>
+        </div>
+
+        <section class="video-row" id="latest" data-aos="fade-up">
+            <h2>Latest Videos</h2>
+            <div class="video-slider">
+                <article class="video-card" data-aos="zoom-in">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/G8zWkYtudd0/hqdefault.jpg" alt="सरकारी परीक्षा को मंजूरी कौन देता है? - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>सरकारी परीक्षा को मंजूरी कौन देता है?</h3>
+                        <a href="https://youtu.be/G8zWkYtudd0" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="video-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/C0HdeGGs66c/hqdefault.jpg" alt="Entomology की तैयारी कैसे करें? - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>Entomology की तैयारी कैसे करें?</h3>
+                        <a href="https://youtu.be/C0HdeGGs66c" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="video-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/6DmWcvUN_jw/hqdefault.jpg" alt="ACF RPSC 2024: Exam की सच्चाई - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>ACF RPSC 2024: Exam की सच्चाई</h3>
+                        <a href="https://youtu.be/6DmWcvUN_jw" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="video-row" id="popular" data-aos="fade-up">
+            <h2>Popular Videos</h2>
+            <div class="video-slider">
+                <article class="video-card" data-aos="zoom-in">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/1KkaXmdFVXk/hqdefault.jpg" alt="BSc के बाद सरकारी नौकरी - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>BSc के बाद सरकारी नौकरी</h3>
+                        <a href="https://youtu.be/1KkaXmdFVXk" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="video-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/d9Wa2HM0D10/hqdefault.jpg" alt="GATE 2025 | नौकरी पाने का तरीका - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>GATE 2025 | नौकरी पाने का तरीका</h3>
+                        <a href="https://youtu.be/d9Wa2HM0D10" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                <article class="video-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="thumbnail">
+                        <img src="https://img.youtube.com/vi/jd3EIFSH57g/hqdefault.jpg" alt="Agricultural Research Services - Thumbnail">
+                    </div>
+                    <div class="video-info">
+                        <h3>Agricultural Research Services</h3>
+                        <a href="https://youtu.be/jd3EIFSH57g" target="_blank" rel="noopener">
+                            Watch Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured-video" data-aos="fade-up">
+            <div class="video-wrapper">
+                <iframe src="https://geo.dailymotion.com/player.html?video=k2vyBzxT5uM2dACv6te" allowfullscreen title="PMI Eduverse Quiz System" allow="autoplay; fullscreen; picture-in-picture; web-share" loading="lazy"></iframe>
+            </div>
+            <div class="video-description">
+                <h3>PMI Eduverse Quiz System</h3>
+                <p>Discover the PMI Eduverse Quiz System, an innovative platform designed to help students prepare for competitive exams like RPSC, NEET, NET, CSIR-NET, GATE, and JEE. Explore its key features, including real-time assessments and structured question banks.</p>
+                <a href="https://www.pmieduverse.com/comingsoon" class="btn btn-primary">More Info</a>
+            </div>
+        </section>
+    </main>
+
+    <footer data-aos="fade-up">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#latest">Latest Videos</a></li>
+                    <li><a href="#popular">Popular Videos</a></li>
+                    <li><a href="https://pmieduverse.github.io/crocovex/" target="_blank" rel="noopener">Crocovex Learning</a></li>
+                    <li><a href="https://www.pmieduverse.com/comingsoon">Courses</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:contact@pmieduverse.com">pmieduverse@gmail.com</a></li>
+                    <li><a href="tel:+916367903784">+91 6367903784</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@PMIeduverse" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/pmieduverse" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/pmieduverse" target="_blank" rel="noopener"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.pmieduverse.com/about">About PMI Eduverse</a></li>
+                    <li><a href="https://www.pmieduverse.com/inquary">Join Our Team</a></li>
+                    <li><a href="https://www.pmieduverse.com/about">Privacy Policy</a></li>
+                    <li><a href="https://www.pmieduverse.com/about">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 PMI Eduverse. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary-color);"></i> by Pankaj</p>
+        </div>
+    </footer>
+
+    <button class="floating-action-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" data-aos="fade-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        let lastScrollTop = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            nav.classList.toggle('hidden', scrollTop > lastScrollTop && scrollTop > 100);
+            lastScrollTop = scrollTop;
+        });
+
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.category-btn.active').classList.remove('active');
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
